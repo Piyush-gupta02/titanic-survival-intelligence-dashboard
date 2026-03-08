@@ -100,34 +100,30 @@ Find historical passengers with similar characteristics and compare survival out
 ---
 
 # 🏗️ Project Structure
-Titanic-Eda Project
-│
-├── data
-│   └── Titanic-Dataset.csv
-│
-├── notebook
-│   └── Titanic_Notebook.ipynb
-│
-├── titanic_dashboard
-│   ├── app.py
-│   ├── config.py
-│   ├── data_loader.py
-│   ├── ml_engine.py
-│   ├── styles.py
-│   ├── visualizations.py
-│   ├── components.py
-│   └── tabs
-│       ├── overview.py
-│       ├── predictor.py
-│       ├── ml_insights.py
-│       ├── timeline.py
-│       └── ...
-│
-├── train_models.py
-├── ml_models.pkl
-├── requirements.txt
-└── README.md
-
+```
+📦 Titanic-Eda Project
+ ┣ 📂 data
+ ┃ ┗ 📄 Titanic-Dataset.csv
+ ┣ 📂 notebook
+ ┃ ┗ 📄 Titanic_Notebook.ipynb
+ ┣ 📂 titanic_dashboard
+ ┃ ┣ 📄 app.py
+ ┃ ┣ 📄 config.py
+ ┃ ┣ 📄 data_loader.py
+ ┃ ┣ 📄 ml_engine.py
+ ┃ ┣ 📄 styles.py
+ ┃ ┣ 📄 visualizations.py
+ ┃ ┣ 📄 components.py
+ ┃ ┗ 📂 tabs
+ ┃   ┣ 📄 overview.py
+ ┃   ┣ 📄 predictor.py
+ ┃   ┣ 📄 ml_insights.py
+ ┃   ┗ 📄 timeline.py
+ ┣ 📄 train_models.py
+ ┣ 📄 ml_models.pkl
+ ┣ 📄 requirements.txt
+ ┗ 📄 README.md
+```
 ---
 
 # 🛠 Technologies Used
@@ -145,8 +141,8 @@ Titanic-Eda Project
 
 # 🚀 Running the Project Locally
 
-Clone the repository
-git clone https://github.com/Piyush-gupta02/titanic-survival-intelligence-dashboard.git
+### Clone the repository
+- git clone https://github.com/Piyush-gupta02/titanic-survival-intelligence-dashboard.git
 
 
 ## Install dependencies
