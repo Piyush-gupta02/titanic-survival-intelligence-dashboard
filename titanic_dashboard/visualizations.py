@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 import pandas as pd
 import numpy as np
 from sklearn.decomposition import PCA
-from config import SURVIVAL_PALETTE, CLASS_COLORS, MODEL_COLORS, DECK_ORDER
+from titanic_dashboard.config import SURVIVAL_PALETTE, CLASS_COLORS, MODEL_COLORS, DECK_ORDER
 
 
 # ---------------------------------------------------

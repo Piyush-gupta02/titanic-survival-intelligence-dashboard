@@ -18,14 +18,14 @@ from sklearn.metrics import roc_curve, auc, precision_recall_curve, average_prec
 import xgboost as xgb
 import streamlit as st
 
-from config import ML_CONFIG, MODEL_FEATURES
+from titanic_dashboard.config import ML_CONFIG, MODEL_FEATURES
 
 
 @st.cache_resource
 def train_ml_pipeline(df: pd.DataFrame) -> dict:
     """Train full ML pipeline with multiple models and SHAP explainability"""
 
-    from data_loader import encode_features, prepare_ml_features
+    from titanic_dashboard.data_loader import encode_features, prepare_ml_features
 
     np.random.seed(42)
 

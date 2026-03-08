@@ -9,13 +9,13 @@ import pandas as pd
 import io
 
 # Module imports
-from config import DATA_PATH, TABS
-from data_loader import load_and_engineer_data, encode_features
-from ml_engine import train_ml_pipeline
-from styles import apply_dark_theme
+from titanic_dashboard.config import DATA_PATH, TABS
+from titanic_dashboard.data_loader import load_and_engineer_data, encode_features
+from titanic_dashboard.ml_engine import train_ml_pipeline
+from titanic_dashboard.styles import apply_dark_theme
 
 # Tab imports
-from tabs import overview, ml_insights, visualizer, timeline, predictor, explainable_ai, analytics, network
+from titanic_dashboard.tabs import overview, ml_insights, visualizer, timeline, predictor, explainable_ai, analytics, network
 
 
 # -----------------------------------------
@@ -31,30 +31,31 @@ st.set_page_config(
 
 apply_dark_theme()
 
+import joblib
+
 @st.cache_resource
-def load_ml_pipeline(df):
-    return train_ml_pipeline(df)
+def load_models():
+    return joblib.load("ml_models.pkl")
+
 # -----------------------------------------
 # DATA LOADING
 # -----------------------------------------
 
 try:
 
-    with st.spinner("🚢 Loading Titanic dataset and training ML models..."):
+    with st.spinner("🚢 Loading Titanic dataset and ML models..."):
 
         time.sleep(0.5)
 
         df = load_and_engineer_data(DATA_PATH)
         df_encoded, encoders = encode_features(df)
 
-        ml_data = load_ml_pipeline(df)
+        ml_data = load_models()
 
 except FileNotFoundError:
 
     st.error(f"Dataset not found at path: {DATA_PATH}")
     st.stop()
-
-
 # -----------------------------------------
 # SIDEBAR
 # -----------------------------------------
