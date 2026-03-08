@@ -9,8 +9,8 @@ venv/
 venv311/
 .env
 
-# Data files if large
-*.csv
+# allow Titanic dataset
+!data/Titanic-Dataset.csv
 
 # Jupyter checkpoints
 .ipynb_checkpoints/

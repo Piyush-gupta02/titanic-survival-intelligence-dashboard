@@ -2,12 +2,8 @@
 
 import os
 
-# ===============================
-# Paths
-# ===============================
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA_PATH = r"E:\New Eda\data\Titanic-Dataset.csv"
+DATA_PATH = os.path.join(BASE_DIR, "data", "Titanic-Dataset.csv")
 
 # ===============================
 # Dashboard settings
@@ -55,7 +51,6 @@ ML_CONFIG = {
         'reg_alpha': 0.1,
         'reg_lambda': 1.0,
         'random_state': 42,
-        'use_label_encoder': False,
         'eval_metric': 'logloss'
     },
     'logistic_regression': {

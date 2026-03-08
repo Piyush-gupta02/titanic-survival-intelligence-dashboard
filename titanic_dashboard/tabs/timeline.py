@@ -98,7 +98,7 @@ def render(filtered_df):
 
     time_survival = (
         filtered_df
-        .groupby(time_bins)["Survived"]
+        .groupby(time_bins, observed=True)["Survived"]
         .mean()
         .reset_index()
     )
