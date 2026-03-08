@@ -31,7 +31,9 @@ st.set_page_config(
 
 apply_dark_theme()
 
-
+@st.cache_resource
+def load_ml_pipeline(df):
+    return train_ml_pipeline(df)
 # -----------------------------------------
 # DATA LOADING
 # -----------------------------------------
@@ -45,7 +47,7 @@ try:
         df = load_and_engineer_data(DATA_PATH)
         df_encoded, encoders = encode_features(df)
 
-        ml_data = train_ml_pipeline(df)
+        ml_data = load_ml_pipeline(df)
 
 except FileNotFoundError:
 
