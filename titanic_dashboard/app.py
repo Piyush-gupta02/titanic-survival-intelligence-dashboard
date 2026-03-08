@@ -9,13 +9,13 @@ import pandas as pd
 import io
 
 # Module imports
-from titanic_dashboard.config import DATA_PATH, TABS
-from titanic_dashboard.data_loader import load_and_engineer_data, encode_features
-from titanic_dashboard.ml_engine import train_ml_pipeline
-from titanic_dashboard.styles import apply_dark_theme
+from config import DATA_PATH, TABS
+from data_loader import load_and_engineer_data, encode_features
+from ml_engine import train_ml_pipeline
+from styles import apply_dark_theme
 
 # Tab imports
-from titanic_dashboard.tabs import overview, ml_insights, visualizer, timeline, predictor, explainable_ai, analytics, network
+from tabs import overview, ml_insights, visualizer, timeline, predictor, explainable_ai, analytics, network
 
 
 # -----------------------------------------
