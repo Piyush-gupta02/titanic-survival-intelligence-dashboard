@@ -2,20 +2,23 @@
 Titanic Survival BI Dashboard - Main Entry Point
 Professional multi-file architecture with advanced ML
 """
+import sys
+import os
 
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import streamlit as st
 import time
 import pandas as pd
 import io
 
 # Module imports
-from config import DATA_PATH, TABS
-from data_loader import load_and_engineer_data, encode_features
-from ml_engine import train_ml_pipeline
-from styles import apply_dark_theme
+from titanic_dashboard.config import DATA_PATH, TABS
+from titanic_dashboard.data_loader import load_and_engineer_data, encode_features
+from titanic_dashboard.ml_engine import train_ml_pipeline
+from titanic_dashboard.styles import apply_dark_theme
 
 # Tab imports
-from tabs import overview, ml_insights, visualizer, timeline, predictor, explainable_ai, analytics, network
+from titanic_dashboard.tabs import overview, ml_insights, visualizer, timeline, predictor, explainable_ai, analytics, network
 
 
 # -----------------------------------------
