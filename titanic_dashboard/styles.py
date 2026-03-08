@@ -138,7 +138,22 @@ def apply_dark_theme():
         ::-webkit-scrollbar-track {
             background: rgba(255,255,255,0.05);
         }
+        [data-testid="stMetricLabel"] {
+        color: #e6e6e6 !important;
+        font-weight: 600;
+        }
 
+        [data-testid="stMetricValue"] {
+        color: #ffffff !important;
+        }
+        [data-testid="stMetricDelta"] {
+        color: #00e676 !important;
+        }
+        
+        
+        
+        
+        
         </style>
         """,
         unsafe_allow_html=True,
